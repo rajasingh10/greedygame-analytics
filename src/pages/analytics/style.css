@@ -1,0 +1,151 @@
+.Analytics-container{
+    padding: 20px;
+}
+
+.title{
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.topAnalytics-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.topAnalytics-element{
+    display: flex;
+    align-items: center;
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 5px;
+   cursor: pointer;
+}
+
+.column-item {
+    display: flex;
+    margin: 1rem;
+    width: 200px;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+    border-left-width: 7px;
+    cursor: pointer;
+  }
+
+  .fixed{
+    cursor: not-allowed;
+  }
+  
+  
+  
+  .column-item.dragging {
+    z-index: 1;
+  }
+  
+  .column-item.dragging::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #f8f8f8;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .column-item.drag-over {
+    background-color: #e6e6e6;
+    border-color: #999;
+  }
+  
+  .column-container{
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  
+  .middleAnalytics-container{
+    border: 1px solid gray;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+
+  .columns-container-buttons{
+    display: flex;
+    justify-content: flex-end;
+  }
+  .columns-container-buttons > button{
+    margin-right: 10px;
+    padding: 5px;
+    cursor: pointer;
+  }
+  .columns-container-buttons :nth-child(1){
+   
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: blue
+  }
+  .columns-container-buttons :nth-child(2){
+    background-color: #537df9;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: #fff;
+  }
+
+
+table.responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  table.responsive-table th,
+  table.responsive-table td {
+    padding: 0.5rem;
+    text-align: left;
+  }
+  table.responsive-table td {
+    border-top: 1px solid #ccc;
+  }
+  
+  
+  table.responsive-table th {
+    background-color: #f2f2f2;
+  }
+  table.responsive-table th > p{
+   color: gray;
+  }
+  
+  @media (max-width: 600px) {
+    table.responsive-table {
+     
+      align-items: center;
+    }
+    table.responsive-table thead {
+      display: none;
+    }
+    table.responsive-table tr {
+      margin-bottom: 1rem;
+      display: block;
+    }
+    table.responsive-table tr td:first-child {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+    table.responsive-table tr td {
+      display: block;
+      text-align: right;
+    }
+  }
+  
+  .view-middleAnalytics-container{
+    display: none;
+  }
